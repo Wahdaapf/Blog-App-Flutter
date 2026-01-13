@@ -42,6 +42,6 @@ This project follows **Clean Architecture**, separating the app into layers:
 ### Installation
 ```bash
 git clone https://github.com/Wahdaapf/Blog-App-Flutter.git
-cd blog_app
+cd Blog-App-Flutter
 flutter pub get
 flutter run
