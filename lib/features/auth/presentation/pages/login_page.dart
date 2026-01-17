@@ -84,6 +84,7 @@ class _LoginPageState extends State<LoginPage> {
                     },
                     child: RichText(
                       text: TextSpan(
+                        // ignore: unnecessary_string_escapes
                         text: "Don\'t have an account? ",
                         style: Theme.of(context).textTheme.titleMedium,
                         children: [
