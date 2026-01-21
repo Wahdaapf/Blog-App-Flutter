@@ -27,4 +27,17 @@ class BlogRemoteDataSourceImpl implements BlogRemoteDataSource {
       throw ServerException(e.toString());
     }
   }
+
+  @override
+  Future<String> uploadBlogImage({
+    required File image,
+    required BlogModel blog,
+  }) async {
+    try {
+      await supabaseClient.storage.from('blog_images').upload(blog.id, image);
+      return supabaseClient.storage.from('blog_images').getPublicUrl(blog.id);
+    } catch (e) {
+      throw ServerException(e.toString());
+    }
+  }
 }
